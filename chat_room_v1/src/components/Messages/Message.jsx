@@ -1,9 +1,12 @@
 import PropTypes from "prop-types";
+import { useSelector } from "react-redux";
 
 const Message = ({ author, message, date, user }) => {
 	const formatDate = (date) => {
 		return new Date(date).toLocaleString();
 	};
+	const currentUser = useSelector((state) => state.user);
+	console.log(currentUser);
 
 	return (
 		<div
@@ -30,6 +33,7 @@ Message.propTypes = {
 	author: PropTypes.string,
 	message: PropTypes.string,
 	date: PropTypes.number,
+	user: PropTypes.string,
 };
 
 export default Message;

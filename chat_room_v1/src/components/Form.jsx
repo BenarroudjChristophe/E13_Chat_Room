@@ -1,9 +1,10 @@
-import React, { useState } from "react";
-
 import { useDispatch } from "react-redux";
 import { addMessage } from "../store/actions/chatAction";
+import { useState } from "react";
+import { logUser } from "../store/actions/settingsAction";
 
 const Form = () => {
+	
 	const user = "Moi";
 	const dispatch = useDispatch();
 	const [inputValue, setInputValue] = useState("");
